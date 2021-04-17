@@ -1,0 +1,1 @@
+insert into cc_activity (description,action_type,card_user,action_date,amount) select description,action_type,card_user,str_to_date(concat(action_date,' ' ,action_time),'%m/%d/%Y %h:%i %p'),amount  from data_load;
