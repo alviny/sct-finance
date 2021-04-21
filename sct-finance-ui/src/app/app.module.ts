@@ -9,10 +9,14 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatSortModule } from "@angular/material/sort";
 import { MatTableModule } from "@angular/material/table";
+import { CcActivityListComponent } from './components/cc-activity-list/cc-activity-list.component';
+import { CcActivityDetailsComponent } from './components/cc-activity-details/cc-activity-details.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CcActivityListComponent,
+    CcActivityDetailsComponent
   ],
   imports: [
     BrowserModule,

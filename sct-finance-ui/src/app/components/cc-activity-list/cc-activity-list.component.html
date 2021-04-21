@@ -1,0 +1,39 @@
+<div class="list row">
+    <div class="col-md-6">
+      <h4>Credit Card Activity List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let cc_activity of cc_activities; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveCCActivity(cc_activity, i)"
+        >
+          {{ cc_activity.description }}
+        </li>
+      </ul>
+  
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="currentCCActivity">
+        <h4>Credit Card Activity</h4>
+        <div>
+          <label><strong>Description:</strong></label> {{ currentCCActivity.description }}
+        </div>
+        <div>
+          <label><strong>Amount:</strong></label>
+          {{ currentCCActivity.amount }}
+        </div>
+  
+        <a class="badge badge-warning" routerLink="/cc-activity/{{ currentCCActivity.id }}">
+          Edit
+        </a>
+      </div>
+  
+      <div *ngIf="!currentCCActivity">
+        <br />
+        <p>Please click on a acivity...</p>
+      </div>
+    </div>
+  </div>
+  
+  If 
