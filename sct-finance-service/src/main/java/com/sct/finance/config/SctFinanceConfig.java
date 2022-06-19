@@ -16,9 +16,9 @@ public class SctFinanceConfig {
 	@Bean
 	public DataSource mainDB() {
 		HikariConfig config = new HikariConfig();
-		config.setJdbcUrl("jdbc:mysql://localhost:3306/sct_finance");
-		config.setUsername("finance_app_user");
-		config.setPassword("finance_app_user");
+		config.setJdbcUrl("jdbc:mysql://localhost:3306/sct");
+		config.setUsername("sct-web-usr");
+		config.setPassword("sct-web-usr");
 		config.setMaximumPoolSize(5);
 //		Properties dbProp = new Properties();
 //		dbProp.setProperty("url", "jdbc:mysql://localhost:3306/sct_finance");
